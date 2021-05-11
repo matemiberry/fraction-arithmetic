@@ -38,8 +38,6 @@ class Fraction:
                      self.den * fraction.den))
 
     def __add__(self, fraction):
-        common_den = self.gcd_euclidean(
-            self.den, fraction.den)
         num1 = self.num * fraction.den
         num2 = fraction.num * self.den
         return Fraction.simplify(
